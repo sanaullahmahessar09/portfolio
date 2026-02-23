@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanaullah|Portfolio</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+
+/* ================= GLOBAL ================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#0a0a0a;
+  color:#fff;
+  transition:0.4s;
+}
+
+.light-mode{
+  background:#f5f5f5;
+  color:#111;
+}
+
+section{
+  padding:100px 10%;
+  text-align:center;
+}
+
+h2{
+  font-size:35px;
+  margin-bottom:40px;
+  color:#ff0066;
+}
+
+/* ================= NAVBAR ================= */
+
+header{
+  position:fixed;
+  width:100%;
+  padding:20px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.8);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:700;
+}
+
+.logo span{
+  color:#ff0066;
+}
+
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:inherit;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#ff0066;
+}
+
+.toggle{
+  margin-left:20px;
+  cursor:pointer;
+  font-size:18px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(90deg,#000,#33001b);
+}
+
+.hero span{
+  color:#ff0066;
+}
+
+.typing{
+  font-size:24px;
+  margin:15px 0;
+}
+
+.btn{
+  padding:12px 30px;
+  background:#ff0066;
+  border-radius:30px;
+  color:#fff;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+}
+
+/* ================= SKILLS ================= */
+
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+}
+
+.skill{
+  border:2px solid #ff0066;
+  padding:12px 25px;
+  border-radius:25px;
+  transition:0.3s;
+}
+
+.skill:hover{
+  background:#ff0066;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+
+.project{
+  width:300px;
+  padding:30px;
+  border:2px solid #ff0066;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.project:hover{
+  transform:translateY(-10px);
+}
+
+/* ================= CONTACT ================= */
+
+form{
+  max-width:500px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+input, textarea{
+  padding:15px;
+  border:none;
+  border-radius:8px;
+}
+
+button{
+  padding:12px;
+  border:none;
+  border-radius:25px;
+  background:#ff0066;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+  nav{
+    display:none;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <div class="logo">Sanaullah<span>Portfolio</span></div>
+  <div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <span class="toggle" onclick="toggleMode()">🌙</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <h1 data-aos="fade-up">Hi, I'm <span>Sanaullah</span></h1>
+  <div class="typing" id="typing"></div>
+  <a href="#contact" class="btn">Hire Me</a>
+</section>
+
+<!-- ABOUT -->
+<section id="about" data-aos="fade-right">
+  <h2>About Me</h2>
+  <p>I create modern, responsive, premium Fiverr-level websites with clean UI/UX and high performance.</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2 data-aos="fade-up">My Skills</h2>
+  <div class="skills">
+    <div class="skill" data-aos="zoom-in">HTML</div>
+    <div class="skill" data-aos="zoom-in">CSS</div>
+    <div class="skill" data-aos="zoom-in">JavaScript</div>
+    <div class="skill" data-aos="zoom-in">React</div>
+    <div class="skill" data-aos="zoom-in">Node.js</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2 data-aos="fade-up">Projects</h2>
+  <div class="projects">
+    <div class="project" data-aos="fade-up">Business Website</div>
+    <div class="project" data-aos="fade-up">Web App Dashboard</div>
+    <div class="project" data-aos="fade-up">Ecommerce Store</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 data-aos="fade-up">Contact Me</h2>
+  <form id="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+AOS.init();
+
+/* ================= TYPING EFFECT ================= */
+
+const words = ["Web Developer", "Frontend Expert", "Freelancer"];
+let i = 0;
+let j = 0;
+let currentWord = "";
+let isDeleting = false;
+const typing = document.getElementById("typing");
+
+function type(){
+  currentWord = words[i];
+
+  if(isDeleting){
+    typing.textContent = currentWord.substring(0, j--);
+    if(j < 0){
+      isDeleting = false;
+      i = (i + 1) % words.length;
+    }
+  } else {
+    typing.textContent = currentWord.substring(0, j++);
+    if(j > currentWord.length){
+      isDeleting = true;
+      setTimeout(type, 1000);
+      return;
+    }
+  }
+  setTimeout(type, isDeleting ? 50 : 100);
+}
+
+type();
+
+/* ================= DARK MODE ================= */
+
+function toggleMode(){
+  document.body.classList.toggle("light-mode");
+}
+
+/* ================= EMAILJS ================= */
+
+(function(){
+  emailjs.init("YOUR_PUBLIC_KEY");
+})();
+
+document.getElementById("contact-form")
+.addEventListener("submit", function(e){
+  e.preventDefault();
+
+  emailjs.sendForm("YOUR_SERVICE_ID",
+                   "YOUR_TEMPLATE_ID",
+                   this)
+  .then(function(){
+    alert("Message Sent Successfully!");
+  }, function(){
+    alert("Failed to send message.");
+  });
+});
+
+</script>
+
+</body>
+</html>
